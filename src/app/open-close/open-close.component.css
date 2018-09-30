@@ -1,0 +1,38 @@
+:host {
+    display: block;
+}
+
+.open-close-1 {
+    background-color: yellow;
+    border: 1px solid #ddd;
+    margin-top: 1em;
+    padding: 20px 20px 0px 20px;
+    color: #000;
+    font-weight: bold;
+    font-size: 20px;
+    position: absolute;
+}
+
+.open-close-2 {
+    background-color: red;
+    border: 1px solid #ddd;
+    margin-top: 1em;
+    padding: 20px 20px 0px 20px;
+    color: #000;
+    font-weight: bold;
+    font-size: 20px;
+    position: absolute;
+    z-index: 2;
+}
+  
+.open-close-3 {
+    background-color: green;
+    border: 1px solid #ddd;
+    margin-top: 1em;
+    padding: 20px 20px 0px 20px;
+    color: #000;
+    font-weight: bold;
+    font-size: 20px;
+    position: absolute;
+    z-index: 2;
+}

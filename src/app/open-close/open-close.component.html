@@ -1,0 +1,20 @@
+<nav>
+  <button (click)="prevSlide()" [disabled]="property.index === 0">PREV</button>
+  <button (click)="nextSlide()" [disabled]="property.index === data.properties.length-1">NEXT</button>
+</nav>
+<div>
+  <div [@animation1]="isOpen1 ? 'open' : isOpen1 === null ? 'any' : 'closed'"
+    class="open-close-1">
+    <p>Holi 1</p>
+  </div>
+
+  <div [@animation1]="isOpen2 ? 'open' : isOpen2 === null ? 'any' : 'closed'"
+    class="open-close-2">
+    <p>Holi 2</p>
+  </div>
+
+  <div [@animation1]="isOpen3 ? 'open' : isOpen3 === null ? 'any' : 'closed'"
+    class="open-close-3">
+    <p>Holi 3</p>
+  </div>
+</div>
