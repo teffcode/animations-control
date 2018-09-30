@@ -6,28 +6,91 @@ import { trigger, transition, state, animate, style } from '@angular/animations'
   templateUrl: './open-close.component.html',
   styleUrls: ['./open-close.component.css'],
   animations: [
+    // left to right
     trigger('animation1', [
       state('open', style({
-        width: '100px',
         opacity: 1,
-        transform: 'translateX(300px)'
+        transform: 'translateX(300px)',
+        width: '100px'
       })),
       state('closed', style({
         display: 'none',
-        width: '100px',
         opacity: 1,
         transform: 'translateX(-300px)',
+        width: '100px'
       })),
       state('any', style({
-        width: '100px',
         display: 'none',
-        transform: 'translateX(-300px)'
+        transform: 'translateX(-300px)',
+        width: '100px'
       })),
         transition('* => closed', [
-        animate('1s')
+        animate('0.5s')
       ]),
         transition('* => open', [
-        animate('1s')
+        animate('0.3s')
+      ]),
+      transition('* => any', [
+        animate('0s')
+      ]),
+    ]),
+    // bottom to top
+    trigger('animation2', [
+      state('open', style({
+        bottom: 0,
+        opacity: 1,
+        transform: 'translateY(-300px)',
+        width: '100px'
+      })),
+      state('closed', style({
+        bottom: 0,
+        display: 'none',
+        opacity: 1,
+        transform: 'translateY(300px)',
+        width: '100px'
+      })),
+      state('any', style({
+        bottom: 0,
+        display: 'none',
+        transform: 'translateY(300px)',
+        width: '100px'
+      })),
+        transition('* => closed', [
+        animate('0.5s')
+      ]),
+        transition('* => open', [
+        animate('0.3s 250ms')
+      ]),
+      transition('* => any', [
+        animate('0s')
+      ]),
+    ]),
+    // right to left
+    trigger('animation3', [
+      state('open', style({
+        opacity: 1,
+        right: 0,
+        transform: 'translateX(-300px)',
+        width: '100px'
+      })),
+      state('closed', style({
+        display: 'none',
+        opacity: 1,
+        right: 0,
+        transform: 'translateX(300px)',
+        width: '100px'
+      })),
+      state('any', style({
+        display: 'none',
+        right: 0,
+        transform: 'translateX(300px)',
+        width: '100px'
+      })),
+        transition('* => closed', [
+        animate('0.5s')
+      ]),
+        transition('* => open', [
+        animate('0.3s 550ms')
       ]),
       transition('* => any', [
         animate('0s')
@@ -69,7 +132,6 @@ export class OpenCloseComponent {
   prevSlide = () => {
     const newIndex = this.property.index-1;
     this.property = this.properties[newIndex];
-    console.log(this.property)
 
     switch(this.property.index) {
       case 0:

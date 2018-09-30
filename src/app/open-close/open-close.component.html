@@ -3,18 +3,46 @@
   <button (click)="nextSlide()" [disabled]="property.index === data.properties.length-1">NEXT</button>
 </nav>
 <div>
+  <!-- Slide 1 -->
   <div [@animation1]="isOpen1 ? 'open' : isOpen1 === null ? 'any' : 'closed'"
     class="open-close-1">
     <p>Holi 1</p>
   </div>
+  <div [@animation2]="isOpen1 ? 'open' : isOpen1 === null ? 'any' : 'closed'"
+    class="open-close-1">
+    <p>Holi 1</p>
+  </div>
+  <div [@animation3]="isOpen1 ? 'open' : isOpen1 === null ? 'any' : 'closed'"
+    class="open-close-1">
+    <p>Holi 1</p>
+  </div>
 
+  <!-- Slide 2 -->
   <div [@animation1]="isOpen2 ? 'open' : isOpen2 === null ? 'any' : 'closed'"
     class="open-close-2">
     <p>Holi 2</p>
   </div>
+  <div [@animation2]="isOpen2 ? 'open' : isOpen2 === null ? 'any' : 'closed'"
+    class="open-close-2">
+    <p>Holi 2</p>
+  </div>
+  <div [@animation3]="isOpen2 ? 'open' : isOpen2 === null ? 'any' : 'closed'"
+    class="open-close-2">
+    <p>Holi 2</p>
+  </div>
 
+  <!-- Slide 3 -->
   <div [@animation1]="isOpen3 ? 'open' : isOpen3 === null ? 'any' : 'closed'"
     class="open-close-3">
     <p>Holi 3</p>
   </div>
+  <div [@animation2]="isOpen3 ? 'open' : isOpen3 === null ? 'any' : 'closed'"
+    class="open-close-3">
+    <p>Holi 2</p>
+  </div>
+  <div [@animation3]="isOpen3 ? 'open' : isOpen3 === null ? 'any' : 'closed'"
+    class="open-close-3">
+    <p>Holi 2</p>
+  </div>
+
 </div>
